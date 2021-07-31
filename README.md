@@ -12,5 +12,6 @@ Big Thank's to BWA for the Deising that can i use for my practice.
 
 Here is some UI View.
 
-![cover](https://user-images.githubusercontent.com/42954205/127743924-31eca9c2-28e9-4296-80b3-052e2beb1667.jpg)
+![cv](https://user-images.githubusercontent.com/42954205/127743984-bec8b086-a0f4-4c72-86a6-e8a09f8320e6.png)
+
 
