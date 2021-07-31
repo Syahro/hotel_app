@@ -9,7 +9,7 @@ Color semiLightGreyColor = Color(0XFFD8D8D8);
 Color greyColor = Color(0XFFB7B7B7);
 Color yellowColor = Color(0XFFFFB25A);
 Color redColor = Color(0XFFF2735B);
-Color lightGreyColor = Color(0XFFFBFBFB);
+Color backgroundColor = Color(0XFFFBFBFB);
 Color whiteColor = Color(0XFFFFFFFF);
 Color blackColor = Color(0XFF2A2B3D);
 
