@@ -2,13 +2,19 @@ import 'package:flutter/material.dart';
 import 'package:hotel_app/theme.dart';
 import 'package:hotel_app/widget/bottom_floating.dart';
 import 'package:hotel_app/widget/recomend_card.dart';
+import 'package:hotel_app/widget/suggestion_card.dart';
 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: backgroundColor,
-      floatingActionButton: BottomFloating(),
+      floatingActionButton: BottomFloating(
+        isHome: true,
+        isSearch: false,
+        isOrder: false,
+        isUser: false,
+      ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       body: SafeArea(
         child: ListView(
@@ -233,79 +239,14 @@ class HomePage extends StatelessWidget {
                             SizedBox(
                               height: 12,
                             ),
-                            Container(
-                              height: 94,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                color: whiteColor,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Padding(
-                                padding: EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 12,
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius: BorderRadius.circular(12),
-                                      child: Image.asset(
-                                        'assets/new1.png',
-                                        width: 72,
-                                        height: double.infinity,
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      width: 9,
-                                    ),
-                                    Column(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.center,
-                                      children: [
-                                        Text(
-                                          'Skytown Hotel',
-                                          style: mediumTextstyle.copyWith(
-                                            fontSize: 14,
-                                            color: blackColor,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          height: 4,
-                                        ),
-                                        Text(
-                                          'Sibolga, Medan',
-                                          style: regularTextStyle.copyWith(
-                                            fontSize: 12,
-                                            color: greyColor,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Spacer(),
-                                    Row(
-                                      children: [
-                                        Text(
-                                          '4.9',
-                                          style: mediumTextstyle.copyWith(
-                                            fontSize: 12,
-                                            color: greyColor,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 2,
-                                        ),
-                                        Icon(
-                                          Icons.star,
-                                          color: yellowColor,
-                                          size: 16,
-                                        ),
-                                      ],
-                                    )
-                                  ],
-                                ),
-                              ),
-                            )
+                            SuggestionCard(
+                              imageUrl: 'assets/new1.png',
+                              name: 'Skytown Hotel',
+                              address: 'Sibolga, Medan',
+                              isNear: false,
+                              star: '4,9',
+                              distance: '',
+                            ),
                           ],
                         ),
                       ),
